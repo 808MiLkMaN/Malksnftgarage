@@ -1,0 +1,29 @@
+{
+    "workbench.editor.doubleClickTabToToggleEditorGroupSizes": "maximize",
+    "workbench.editor.editorActionsLocation": "titleBar",
+    "workbench.editor.enablePreviewFromCodeNavigation": true,
+    "workbench.editor.enablePreviewFromQuickOpen": true,
+    "workbench.editor.labelFormat": "medium",
+    "workbench.editor.limit.enabled": true,
+    "workbench.editor.limit.excludeDirty": true,
+    "workbench.editor.limit.perEditorGroup": true,
+    "workbench.editor.navigationScope": "editor",
+    "workbench.editor.openPositioning": "right",
+    "workbench.editor.openSideBySideDirection": "down",
+    "workbench.editor.pinnedTabSizing": "compact",
+    "workbench.editor.pinnedTabsOnSeparateRow": true,
+    "workbench.editor.preferHistoryBasedLanguageDetection": true,
+    "workbench.editor.revealIfOpen": true,
+    "workbench.editor.scrollToSwitchTabs": true,
+    "workbench.editor.sharedViewState": true,
+    "workbench.editor.splitSizing": "auto",
+    "workbench.editor.tabActionLocation": "left",
+    "workbench.editor.tabSizing": "fixed",
+    "workbench.editor.tabSizingFixedMaxWidth": 260,
+    "workbench.editor.tabSizingFixedMinWidth": 50,
+    "workbench.editor.wrapTabs": true,
+    "window.density.editorTabHeight": "compact",
+    "terminal.integrated.commandsToSkipShell": [
+        ""
+    ]
+}
