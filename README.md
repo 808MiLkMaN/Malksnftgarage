@@ -24,6 +24,8 @@ Or if installed globally:
 copilot-cli
 ```
 
+Running the CLI without arguments displays the built-in help menu with all available commands.
+
 ### Available Commands
 
 - `copilot-cli` - Display help information (default)
@@ -68,7 +70,7 @@ chmod +x bin/copilot-cli.js
 
 ## Requirements
 
-- Node.js 20.1 or higher
+- Node.js 16 or higher
 - npm
 
 ## License

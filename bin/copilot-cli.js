@@ -34,30 +34,34 @@ program
     try {
       console.log(chalk.cyan('\n🤖 Welcome to Copilot CLI Interactive Mode!\n'));
       
-      const answers = await inquirer.prompt([
-        {
-          type: 'list',
-          name: 'action',
-          message: 'What would you like to do?',
-          choices: [
-            'View project information',
-            'Display help',
-            'Exit'
-          ]
-        }
-      ]);
+      let shouldContinue = true;
+      
+      while (shouldContinue) {
+        const answers = await inquirer.prompt([
+          {
+            type: 'list',
+            name: 'action',
+            message: 'What would you like to do?',
+            choices: [
+              'View project information',
+              'Display help',
+              'Exit'
+            ]
+          }
+        ]);
 
-      switch (answers.action) {
-        case 'View project information':
-          displayProjectInfo();
-          break;
-        case 'Display help':
-          displayHelp();
-          break;
-        case 'Exit':
-          console.log(chalk.yellow('Goodbye! 👋\n'));
-          process.exit(0);
-          break;
+        switch (answers.action) {
+          case 'View project information':
+            displayProjectInfo();
+            break;
+          case 'Display help':
+            displayHelp();
+            break;
+          case 'Exit':
+            console.log(chalk.yellow('Goodbye! 👋\n'));
+            shouldContinue = false;
+            break;
+        }
       }
     } catch (error) {
       console.error(chalk.red('\n❌ Error in interactive mode:'), error.message);
