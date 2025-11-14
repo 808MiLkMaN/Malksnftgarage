@@ -3,7 +3,8 @@
 const { program } = require('commander');
 const chalk = require('chalk');
 const inquirer = require('inquirer');
-const packageJson = require('../package.json');
+const path = require('path');
+const packageJson = require(path.join(__dirname, '..', 'package.json'));
 
 // Configure the CLI
 program
