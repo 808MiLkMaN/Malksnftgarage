@@ -31,32 +31,37 @@ program
   .command('interactive')
   .description('Start interactive mode')
   .action(async () => {
-    console.log(chalk.cyan('\n🤖 Welcome to Copilot CLI Interactive Mode!\n'));
-    
-    const answers = await inquirer.prompt([
-      {
-        type: 'list',
-        name: 'action',
-        message: 'What would you like to do?',
-        choices: [
-          'View project information',
-          'Display help',
-          'Exit'
-        ]
-      }
-    ]);
+    try {
+      console.log(chalk.cyan('\n🤖 Welcome to Copilot CLI Interactive Mode!\n'));
+      
+      const answers = await inquirer.prompt([
+        {
+          type: 'list',
+          name: 'action',
+          message: 'What would you like to do?',
+          choices: [
+            'View project information',
+            'Display help',
+            'Exit'
+          ]
+        }
+      ]);
 
-    switch (answers.action) {
-      case 'View project information':
-        displayProjectInfo();
-        break;
-      case 'Display help':
-        displayHelp();
-        break;
-      case 'Exit':
-        console.log(chalk.yellow('Goodbye! 👋\n'));
-        process.exit(0);
-        break;
+      switch (answers.action) {
+        case 'View project information':
+          displayProjectInfo();
+          break;
+        case 'Display help':
+          displayHelp();
+          break;
+        case 'Exit':
+          console.log(chalk.yellow('Goodbye! 👋\n'));
+          process.exit(0);
+          break;
+      }
+    } catch (error) {
+      console.error(chalk.red('\n❌ Error in interactive mode:'), error.message);
+      process.exit(1);
     }
   });
 
@@ -70,18 +75,12 @@ program
 
 function displayProjectInfo() {
   console.log(chalk.cyan('\n📦 Project Information\n'));
-  console.log(chalk.white('Name: ') + chalk.green(packageJson.name));
-  console.log(chalk.white('Version: ') + chalk.green(packageJson.version));
-  console.log(chalk.white('Description: ') + chalk.green(packageJson.description));
-  console.log(chalk.white('Author: ') + chalk.green(packageJson.author));
-  console.log(chalk.white('License: ') + chalk.green(packageJson.license));
+  console.log(chalk.white('Name: ') + chalk.green(packageJson.name || 'N/A'));
+  console.log(chalk.white('Version: ') + chalk.green(packageJson.version || 'N/A'));
+  console.log(chalk.white('Description: ') + chalk.green(packageJson.description || 'N/A'));
+  console.log(chalk.white('Author: ') + chalk.green(packageJson.author || 'N/A'));
+  console.log(chalk.white('License: ') + chalk.green(packageJson.license || 'N/A'));
   console.log('');
-}
-
-// If no command is specified, display help
-if (!process.argv.slice(2).length) {
-  displayHelp();
-  process.exit(0);
 }
 
 // Parse arguments
