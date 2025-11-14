@@ -4,7 +4,16 @@ const { program } = require('commander');
 const chalk = require('chalk');
 const inquirer = require('inquirer');
 const path = require('path');
-const packageJson = require(path.join(__dirname, '..', 'package.json'));
+
+// Load package.json with error handling
+let packageJson;
+try {
+  packageJson = require(path.join(__dirname, '..', 'package.json'));
+} catch (error) {
+  console.error(chalk.red('Error: Could not load package.json'));
+  console.error(error.message);
+  process.exit(1);
+}
 
 // Configure the CLI
 program
