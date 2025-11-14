@@ -28,8 +28,8 @@ Running the CLI without arguments displays the built-in help menu with all avail
 
 ### Available Commands
 
-- `copilot-cli` - Display help information (default)
-- `copilot-cli help` - Display help information
+- `copilot-cli` - Display usage information (default)
+- `copilot-cli help` - Display detailed help with examples
 - `copilot-cli version` - Display version information
 - `copilot-cli interactive` - Start interactive mode
 - `copilot-cli info` - Display project information

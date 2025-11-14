@@ -1,0 +1,38 @@
+Malks NFT Garage - Copilot CLI Demo
+====================================
+
+$ node bin/copilot-cli.js help
+
+🚀 Malks NFT Garage Copilot CLI
+
+Available commands:
+  copilot-cli help       - Display this help message
+  copilot-cli version    - Display version information
+  copilot-cli interactive - Start interactive mode
+  copilot-cli info        - Display project information
+
+---
+
+$ node bin/copilot-cli.js info
+
+📦 Project Information
+
+Name: malksnftgarage-copilot-cli
+Version: 1.0.0
+Description: A command-line interface tool for Malks NFT Garage with Copilot-like functionality
+Author: 808MiLkMaN
+License: MIT
+
+---
+
+$ node bin/copilot-cli.js interactive
+
+🤖 Welcome to Copilot CLI Interactive Mode!
+
+? What would you like to do? 
+  View project information
+❯ Display help
+  Exit
+
+Interactive mode supports multiple actions in a loop until you choose Exit.
+
