@@ -97,5 +97,11 @@ function displayProjectInfo() {
   console.log('');
 }
 
+// If no command was provided, show help and exit successfully
+if (!process.argv.slice(2).length) {
+  displayHelp();
+  process.exit(0);
+}
+
 // Parse arguments
 program.parse(process.argv);
