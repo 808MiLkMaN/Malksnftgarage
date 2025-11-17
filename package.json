@@ -1,0 +1,26 @@
+{
+  "name": "malksnftgarage-copilot-cli",
+  "version": "1.0.0",
+  "description": "A command-line interface tool for Malks NFT Garage with Copilot-like functionality",
+  "main": "index.js",
+  "bin": {
+    "copilot-cli": "./bin/copilot-cli.js"
+  },
+  "scripts": {
+    "start": "node bin/copilot-cli.js",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": [
+    "cli",
+    "copilot",
+    "nft",
+    "garage"
+  ],
+  "author": "808MiLkMaN",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^11.0.0",
+    "chalk": "^4.1.2",
+    "inquirer": "^8.2.5"
+  }
+}
